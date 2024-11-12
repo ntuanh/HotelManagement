@@ -1,4 +1,4 @@
-# HotelManagement
+# Hotel Management
 ## Big Project ET2100
 ### Team size : 5 .
 

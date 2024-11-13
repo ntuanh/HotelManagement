@@ -7,7 +7,8 @@ typedef struct Users {
     int birth ;     //form : year + month + date -> example : 20050705 
     char* email ;   
     int phone_number;   // form : "84 + number " -> example : 842312312
-
+    struct Users *next ;
+    struct Users *prev ;
 } Users ;
 
 void ShowTestUsers();

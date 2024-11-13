@@ -8,6 +8,8 @@ typedef struct Hotels {
     char* address ;
     int phone_number;   // form : "84 + number " -> example : 842312312
     int ratting ;   // from 1 to 100  
+    struct Hotels *next ;
+    struct Hotels *prev ;
 } Hotels ;
 
 void ShowTestHotels();

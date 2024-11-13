@@ -7,7 +7,7 @@ typedef struct History {
     int price ;     //
     char* address ;
     int phone_number;   // form : "84 + number " -> example : 842312312
-    int ratting ;   // from 1 to 100 
+    int rating ;   // from 1 to 100 
     struct History *next ;
     struct History *prev ; 
 } History ;

@@ -8,6 +8,7 @@ typedef struct DataHotel
     char* name  ;       
     char* location ;
     int hotline ;
+    int past_guests; // The number of guests who have stayed at a hotel
 } DataHotel;
 
 typedef struct DHotel

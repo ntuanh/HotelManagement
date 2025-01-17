@@ -8,3 +8,4 @@
 50|11|hotel_8|NewYorkCity|19002008|1
 0|25|hotel_9|Paris|19002009|0
 0|10|hotel_10|HoChiMinhCity|1900110|0
+27|6|hotel_1|Berlin|19002000|2

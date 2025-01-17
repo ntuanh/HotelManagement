@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>User Interface</title>
+</head>
+<body>
+    <header>
+        <h1>User Interface</h1>
+    </header>
+    <main>
+        <p>Welcome to the User Interface. Here you can manage your bookings and view your history.</p>
+        <h2>Sign In / Sign Up</h2>
+        <button onclick="toggleForm('signIn')">Sign In</button>
+        <button onclick="toggleForm('signUp')">Sign Up</button>
+
+        <div id="signIn" style="display:none;">
+            <h3>Sign In</h3>
+            <form onsubmit="return handleSignIn();">
+                <label for="signInId">ID:</label>
+                <input type="text" id="signInId" name="signInId" required>
+                <label for="signInName">Name:</label>
+                <input type="text" id="signInName" name="signInName" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div id="signUp" style="display:none;">
+            <h3>Sign Up</h3>
+            <form onsubmit="return handleSignUp();">
+                <label for="signUpId">ID:</label>
+                <input type="text" id="signUpId" name="signUpId" required>
+                <label for="signUpName">Name:</label>
+                <input type="text" id="signUpName" name="signUpName" required>
+                <label for="signUpPhone">Phone Number:</label>
+                <input type="text" id="signUpPhone" name="signUpPhone" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <script>
+            function toggleForm(formType) {
+                document.getElementById('signIn').style.display = formType === 'signIn' ? 'block' : 'none';
+                document.getElementById('signUp').style.display = formType === 'signUp' ? 'block' : 'none';
+            }
+
+            function handleSignIn() {
+                const id = document.getElementById('signInId').value;
+                const name = document.getElementById('signInName').value;
+
+                // Call the signInUser function from UserInterface.c
+                const result = signInUser(id, name);
+                if (result.id !== -1) {
+                    alert('Sign In Successful!');
+                } else {
+                    alert('Sign In Failed: Invalid ID or Name');
+                }
+                return false; // Prevent form submission for demonstration
+            }
+
+            function handleSignUp() {
+                const id = document.getElementById('signUpId').value;
+                const name = document.getElementById('signUpName').value;
+                const phone = document.getElementById('signUpPhone').value;
+
+                // Call the signUpUser function from the Interface
+                console.log(`Sign Up: ID = ${id}, Name = ${name}, Phone = ${phone}`);
+                // Implement the actual sign-up logic here
+                return false; // Prevent form submission for demonstration
+            }
+        </script>
+    </main>
+    <footer>
+        <p>&copy; 2023 Hotel Management System</p>
+    </footer>
+</body>
+</html>
+</create_file>

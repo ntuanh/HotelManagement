@@ -45,7 +45,7 @@ DataUser signInUser()
 
         if (id == id_file && strcmp(name, name_file) == 0)
         {
-            printf("SIGN IN SUCCESSFULLY !\n");
+            printf("SIGN IN SUCCESSFULLY! Welcome, %s.\n", name_file);
 
             DataUser my_user = {id , name_file };
             free(name);

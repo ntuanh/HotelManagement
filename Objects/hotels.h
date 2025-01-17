@@ -8,12 +8,9 @@
 
 typedef struct DataHotel  
 {
-    int rating  ;   // from 1 to 100 
-    int available_room ;    // from 0 
-    char* name  ;       
-    char* location ;
-    int hotline ;
-    int total_visitors ;
+    char* name  , location ;
+    int available_room , total_visitors  , hotline ;
+    float rating  ;   // from 0 to 5 
 } DataHotel;
 
 typedef struct DHotel
@@ -30,8 +27,7 @@ typedef struct ListHotel
     PDHotel T ;
 }* ListHotel ;
 
-// Function prototypes 
-void showTestHotels();
+// Functions
 ListHotel createListHotel() ;
 ListHotel addHotel(ListHotel hotels , DataHotel data );
 PDHotel searchByNameHotel(ListHotel hotels , const char* name );

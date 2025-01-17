@@ -3,3 +3,6 @@ hotel_2|Beijing|241228
 
 101|1900101
 hotel_9|Paris|241228
+
+1009|19001009
+hotel_1|Berlin|241231
